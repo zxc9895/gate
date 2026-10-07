@@ -41,6 +41,7 @@ VPNGATE_MIRROR = os.environ.get(
     "https://raw.githubusercontent.com/fdciabdul/Vpngate-Scraper-API/main/json/data.json",
 )
 WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://zxc.zxc8.ggff.net/check?sstp=vpn:vpn@")
+print("DEBUG", len(WORKER_CHECK_URL), " " in WORKER_CHECK_URL, "\n" in WORKER_CHECK_URL, WORKER_CHECK_URL.startswith("https://"))
 CONCURRENCY = max(1, int(os.environ.get("CHECK_CONCURRENCY", "32")))
 CHECK_TIMEOUT = float(os.environ.get("CHECK_TIMEOUT", "90"))
 MAX_CHECK_NODES = int(os.environ.get("MAX_CHECK_NODES", "0"))
